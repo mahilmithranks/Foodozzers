@@ -1,8 +1,17 @@
 import React from 'react'
 import { GiChefToque, GiForkKnifeSpoon } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { FiHome } from "react-icons/fi";
 
 const Navbar = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const Navlink = [
+        {name: 'Home', to: '/', icon: <FiHome/>}
+    ]
+
     return (
         <nav className='bg-[#2D1B0E] border-b-8 border-amber-900/30 shadow-amber-900/30 sticky top-0 z-50 shadow-[0_25px_50px_-12px] front-vibes group/nav overflow-x-hidden'>
             <div className='absolute -top-3 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4'>
@@ -41,6 +50,9 @@ const Navbar = () => {
                         </div>
                     </div>
                     {/*DESKTOP NAVIGATION */}
+                    <div className=' hidden md:flex items-center space-x-2 md:space-x-1 lg:space-x-4 flex-1 justify-end'>
+
+                    </div>
                 </div>
             </div>
         </nav>
